@@ -1,0 +1,93 @@
+body, html {
+    height: 100%
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Namdhinggo", sans-serif;
+    font-weight: 400;
+}
+
+/* Color Overrides */
+
+.w3-text-white {
+    color: #EEEDEB !important;
+}
+
+.w3-black {
+    background-color: #000203 !important;
+}
+
+.w3-red {
+    background-color: #C9414F !important;
+}
+
+.w3-hover-red:hover {
+    background-color: #B6545D !important;
+}
+
+.w3-custom-orange {
+    background-color: #E77558;
+    color: #EEEDEB;
+}
+
+.w3-custom-blue {
+    background-color: #00A4B3 !important;
+    color: #EEEDEB;
+}
+
+/* End of Color Overrides */
+
+.w3-tag {
+    font-size: 24px !important;
+    vertical-align: text-top;
+}
+
+.menu {
+    display: none
+}
+
+#choices > a > div {
+    width: max-content;
+}
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: -10vh;
+  background-image: url("../images/inside.jpg");
+  min-height: 90%;
+}
+
+@media (max-width: 800px) {
+    #about-blurb img {
+        width: 34vw !important;
+    }
+
+    .w3-xxlarge {
+        font-size: 24px !important;
+    }
+
+    .w3-display-bottomleft {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #about-blurb {
+        display: block !important;
+    }
+
+    #about-blurb img {
+        width: 100% !important;
+        padding: 0% !important;
+        float: none !important;
+        margin: 15px 0px !important;
+    }
+
+    .w3-col.s4 {
+        width: 100% !important;
+    }
+}
