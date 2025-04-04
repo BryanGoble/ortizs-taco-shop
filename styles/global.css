@@ -90,4 +90,12 @@ body,h1,h2,h3,h4,h5,h6 {
     .w3-col.s4 {
         width: 100% !important;
     }
+
+    .menu-item {
+        font-size: 1.5em !important;
+    }
+
+    h1 {
+        font-size: 48px !important;
+    }
 }
