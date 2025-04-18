@@ -56,8 +56,8 @@ body,h1,h2,h3,h4,h5,h6 {
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: -10vh;
-  background-image: url("../images/inside.jpg");
-  min-height: 90%;
+  background-image: url("../images/inside.webp");
+  min-height: 70vh;
 }
 
 @media (max-width: 800px) {
@@ -81,14 +81,14 @@ body,h1,h2,h3,h4,h5,h6 {
     }
 
     #about-blurb img {
-        width: 100% !important;
+        width: 100vw !important;
         padding: 0% !important;
         float: none !important;
         margin: 15px 0px !important;
     }
 
     .w3-col.s4 {
-        width: 100% !important;
+        width: 100vw !important;
     }
 
     .menu-item {
