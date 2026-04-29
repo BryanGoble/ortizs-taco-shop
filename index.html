@@ -1,588 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ortiz's Taco Shop</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ortiz's Taco Shop in San Diego, CA, serves the best Mexican food. Visit us for tacos, burritos, and more!">
-  <meta name="keywords" content="ortizs taco shop, sabrosa, tacos, burritos, san diego, point loma, voltaire, best, menu, 92107">
-  <link rel="icon" type="image/x-icon" href="/images/logo.png">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-  <link rel="stylesheet" href="styles/global.css">
-  <link href="https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Ortiz's Taco Shop | San Diego</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ortiz's Taco Shop in San Diego, CA, serves the best Mexican food. Visit us for tacos, burritos, and more!">
+    <meta name="keywords" content="ortizs taco shop, sabrosa, tacos, burritos, san diego, point loma, voltaire, best, menu, 92107">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top w3-hide-small">
-    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-      <a href="#" class="w3-bar-item w3-button">HOME</a>
-      <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
-    </div>
-  </div>
-
-  <!-- Header with image -->
-  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-bottomleft w3-padding">
-      <span class="w3-tag w3-xxlarge">Open from 8:00am to 9:00pm</span>
-    </div>
-    <div class="w3-display-middle w3-center">
-      <span class="w3-text-white w3-hide-medium w3-hide-small" style="font-size: 100px; text-shadow: -3px 3px 10px black;"><b>The Locals Taco Shop</b></span>
-      <span class="w3-text-white w3-hide-large w3-hide-small" style="font-size: 80px; text-shadow: -3px 3px 10px black;"><b>The Locals</br>Taco Shop</b></span>
-      <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:50px; text-shadow: -4px 4px 6px black;"><b>The Locals</br>Taco Shop</b></span>
-      <p><a href="#menu" class="w3-button w3-xxlarge w3-black" style="box-shadow: -3px 3px 9px white;">Let me see the menu</a></p>
-    </div>
-  </header>
-  
-  <!-- Menu Container -->
-  <div class="w3-container w3-black w3-padding-24" id="menu">
-    <div class="w3-content">
-    
-      <h1 class="w3-center" style="margin-bottom:24px; font-size: 64px;">The Menu</h1>
-      <div id="choices" class="w3-row w3-center w3-border w3-border-dark-grey w3-xlarge" style="display: flex; flex-direction: row; overflow: auto; scrollbar-width: none; -ms-overflow-style: none;">
-        <a href="javascript:void(0)" onclick="openMenu(event, 'breakfast-burrito');" id="myLink">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Breakfast Burritos</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'breakfast-plate');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Breakfast Plates</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'combo');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Combination Plates</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'burritos');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Burritos</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'tacos');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Tacos</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'mini');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Mini Tacos</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'chimichangas');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Chimichangas</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'enchiladas');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Enchiladas</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'quesadillas');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Quesadillas</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'tortas');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Tortas</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'tostadas');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Tostadas</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'nacho');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Nachos & Fries</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'soups');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Soups</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'sides');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Sides</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'extras');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Extras</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'beverages');">
-          <div class="w3-col tablink w3-padding-large w3-hover-red">Beverages</div>
-        </a>
-      </div>
-
-
-      <div id="breakfast-burrito" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Chorizo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.25</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Ham</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.25</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Machaca</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.25</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Surf</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.25</span></p>
-        <p class="w3-text-grey">Bacon, Egg, Potato, & Cheese</p>
-      </div>
-
-      <div id="breakfast-plate" class="w3-container menu w3-padding-32 w3-white">
-        <p>All plates served with Rice, Beans, and Tortillas</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chilaquiles</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey">Choice of Red or Green</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chorizo</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Ham</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Huevos A La Mexicana</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Huevos Rancheros</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Machaca</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="combo" class="w3-container menu w3-padding-32 w3-white">
-        <p>All plates served with Rice, Beans, and Tortillas</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carne Asada</b><span class="w3-right w3-tag w3-dark-grey w3-round">$13.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$12.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cheese Enchiladas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken Enchiladas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Shrimp Burrito</b><span class="w3-right w3-tag w3-dark-grey w3-round">$14.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Shrimp Rancheros</b><span class="w3-right w3-tag w3-dark-grey w3-round">$14.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Two Beef Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Two Chicken Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Two Chiles Rellenos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Two Fish Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.95</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="burritos" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Bean Cheese</b><span class="w3-right w3-tag w3-dark-grey w3-round">$6.84</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Buche</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cabeza</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>California</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.99</span></p>
-        <p class="w3-text-grey">Carne Asada, Fries, Guacamole, Sour Cream, & Cheese</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chile Relleno</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Fish</b><span class="w3-right w3-tag w3-dark-grey w3-round">$8.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Mixed</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.21</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Pastor</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Shrimp</b><span class="w3-right w3-tag w3-dark-grey w3-round">$12.79</span></p>
-        <p class="w3-text-grey">Shrimp, Rice, Salsa Fresca, Lettuce, & Tartar Sauce</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Vegetarian</b><span class="w3-right w3-tag w3-dark-grey w3-round">$8.87</span></p>
-        <p class="w3-text-grey">Beans, Cheese, Rice, Lettuce, Salsa Fresca, & Guacamole</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Conga</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.75</span></p>
-        <p class="w3-text-grey">Choice of Meat. Bean, Rice, & Cheese</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Sabroso</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.79</span></p>
-        <p class="w3-text-grey">Carne Asada, Shrimp, Rice, & Sour Cream</p>
-      </div>
-
-      <div id="tacos" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$4.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Buche</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cabeza</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Fish</b><span class="w3-right w3-tag w3-dark-grey w3-round">$4.49</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Pastor</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Shrimp</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>3 Rolled Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$5.45</span></p>
-        <p class="w3-text-grey">Served with Cheese, Lettuce, & Guacamole</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>6 Rolled Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$7.97</span></p>
-        <p class="w3-text-grey">Served with Cheese, Lettuce, & Guacamole</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>12 Rolled Tacos</b><span class="w3-right w3-tag w3-dark-grey w3-round">$14.75</span></p>
-        <p class="w3-text-grey">Served with Cheese, Lettuce, & Guacamole</p>
-      </div>
-
-      <div id="mini" class="w3-container menu w3-padding-32 w3-white">
-        <p>Each order is 4 Mini Tacos</p>
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Buche</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cabeza</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Pastor</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.45</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="chimichangas" class="w3-container menu w3-padding-32 w3-white">
-        <p>All Chimichangas served with Lettuce, Cheese, & Guacamole</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.70</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$12.70</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$12.70</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="enchiladas" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$7.49</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cheese</b><span class="w3-right w3-tag w3-dark-grey w3-round">$7.49</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$7.49</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="quesadillas" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b><span class="w3-right w3-tag w3-dark-grey w3-round">$12.89</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cheese</b><span class="w3-right w3-tag w3-dark-grey w3-round">$6.98</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Ham</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Shrimp</b><span class="w3-right w3-tag w3-dark-grey w3-round">$13.99</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="tortas" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carnitas</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chorizo</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Ham</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Machaca</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Pastor</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.80</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="tostadas" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Beans</b><span class="w3-right w3-tag w3-dark-grey w3-round">$4.45</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$6.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$6.99</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Flying Saucer - Asada</b><span class="w3-right w3-tag w3-dark-grey w3-round">$11.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Flying Saucer - Beef</b><span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Flying Saucer - Carne Asada Fries</b><span class="w3-right w3-tag w3-dark-grey w3-round">$15.77</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Flying Saucer - Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$9.90</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Flying Saucer - Vegetarian</b><span class="w3-right w3-tag w3-dark-grey w3-round">$8.40</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="nacho" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Carne Asada Nachos</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.77</span></p>
-        <p class="w3-text-grey">Carne Asada, Beans, Cheese, Salsa Fresca, Guacamole, & Sour Cream</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Carne Asada Fries</b><span class="w3-right w3-tag w3-dark-grey w3-round">$15.77</span></p>
-        <p class="w3-text-grey">Carne Asada, Cheese, Salsa Fresca, Guacamole & Sour Cream</p>
-      </div>
-
-      <div id="soups" class="w3-container menu w3-padding-32 w3-white">
-        <p>All soups served with Tortillas & Rice</p>
-        <p class="menu-item" style="font-size: 36px;"><b>Caldo de Res</b><span class="w3-right w3-tag w3-dark-grey w3-round">$13.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Menudo</b><span class="w3-right w3-tag w3-dark-grey w3-round">$13.75</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="sides" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Coctel de Camaron</b><span class="w3-right w3-tag w3-dark-grey w3-round">$</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beans</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.74</span></p>
-        <p class="w3-text-grey">1/2 Pint</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Guacamole</b><span class="w3-right w3-tag w3-dark-grey w3-round">$4.99</span></p>
-        <p class="w3-text-grey">1/2 Pint</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Mexican Salsa</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.74</span></p>
-        <p class="w3-text-grey">1/2 Pint</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Rice</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.74</span></p>
-        <p class="w3-text-grey">1/2 Pint</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Sour Cream</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.74</span></p>
-        <p class="w3-text-grey">1/2 Pint</p>
-      </div>
-
-      <div id="extras" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Asada</b><span class="w3-right w3-tag w3-dark-grey w3-round">$</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Chicken</b><span class="w3-right w3-tag w3-dark-grey w3-round">$</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Beans</b><span class="w3-right w3-tag w3-dark-grey w3-round">$0.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Cheese</b><span class="w3-right w3-tag w3-dark-grey w3-round">$0.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Guacamole</b><span class="w3-right w3-tag w3-dark-grey w3-round">$0.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Rice</b><span class="w3-right w3-tag w3-dark-grey w3-round">$0.75</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Sour Cream</b><span class="w3-right w3-tag w3-dark-grey w3-round">$0.75</span></p>
-        <p class="w3-text-grey"></p>
-      </div>
-
-      <div id="beverages" class="w3-container menu w3-padding-32 w3-white">
-        <p class="menu-item" style="font-size: 36px;"><b>Soda</b><span class="w3-right w3-tag w3-dark-grey w3-round">$1.62</span></p>
-        <p class="w3-text-grey"></p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Horchata</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.75</span></p>
-        <p class="w3-text-grey">20 oz</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Jamaica</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.75</span></p>
-        <p class="w3-text-grey">20 oz</p>
-        <hr>
-
-        <p class="menu-item" style="font-size: 36px;"><b>Tamarindo</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.75</span></p>
-        <p class="w3-text-grey">20 oz</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- About Container -->
-  <div class="w3-container w3-padding-24 w3-custom-blue w3-xlarge" id="about">
-    <div class="w3-content">
-      <h1 class="w3-center" style="margin-bottom:20px; font-size: 64px;">About</h1>
-      <div id="about-blurb" style="display: flex;">
-        <div>
-          <p>Welcome to our cozy taco shop, serving Ocean Beach and Point Loma since 2004. We're all about simple, friendly service and delicious, fresh Mexican food.</p>
-          <p>Our signature California burrito and Sabroso (surf and turf) are local favorites, and our tacos - like Carnitas and Asada - are a hit with customers. Come on in, try us out, and taste the difference for yourself. We're confident you'll leave feeling full, happy, and eager to return.</p>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-text-white" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button nav-brand">Ortiz's<span class="nav-brand-accent">.</span></a>
+            <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+
+            <button id="theme-toggle" class="w3-bar-item w3-button w3-right" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">🌙</span>
+            </button>
         </div>
-        <img src="images/taco.webp" alt="Carne Asada Taco plate" style="float: right; width: 24vw; margin: 25px 0px; padding-left: 4%; height: fit-content;"/>
-      </div>
-      
-      <hr/>
-
-      <img src="images/outside.webp" alt="Picture from the outside of the front of Ortizs Taco Shop" style="width:100vw" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
-
-      <h1 style="font-size: 48px;"><b>Opening Hours</b></h1>
-
-      <div class="w3-row">
-        <div class="w3-col s4">
-          <p>Monday - Saturday</p>
-          <p>8:00am - 9:00pm</p>
-        </div>
-        <div class="w3-col s4">
-          <p>Sunday</p>
-          <p>Closed</p>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Image of location/map -->
-  <img src="images/maps.webp" alt="Birds eye view of Ortizs Taco Shop" class="" style="width:100vw; z-index: -99; position: relative;" id="myMap">
+    <!-- Hero -->
+    <header class="bgimg" id="home">
+        <div class="hero-content">
+            <span class="hero-eyebrow">San Diego · Since 2004</span>
+            <h1 class="hero-title">Ortiz's Taco Shop</h1>
+            <p class="hero-tagline">Authentic flavors. Family recipes. Your neighborhood spot.</p>
+            <a href="#menu" class="hero-cta">View Menu</a>
+        </div>
+        <div class="hero-status" id="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="hero-status-text">Checking hours…</span>
+        </div>
+    </header>
 
-  <!-- Contact -->
-  <div class="w3-container w3-padding-24 w3-custom-orange w3-xlarge">
-    <div class="w3-content">
-      <h1 class="w3-center" style="margin-bottom:24px; font-size: 64px;">Contact</h1>
-      <p>Curious about us or have a question?</p>
-      <p>Stop in at <a href="https://www.google.com/maps/place/Ortiz's+Taco+Shop/@32.7405,-117.2290722,1266m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80deabacd6d14b9d:0x1d3a0c6d1fe7a7af!8m2!3d32.7405!4d-117.2290722!16s%2Fg%2F1wv_sjfy" target="_blank"><b>3704 Voltaire St, San Diego, CA 92107</b></a> or give us a call at <a href="tel:619-222-4476"><b>(619) 222-4476</b></a>.</p>
+    <!-- Info Strip -->
+    <div class="w3-container status-bar">
+        <div class="w3-content w3-center">
+            <div class="w3-row">
+            <div class="w3-col l4 m4 s12 status-item">
+                <span class="status-icon">📍</span>
+                <p>
+                    <a href="https://maps.google.com/?cid=2106009438575372207&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&amp;hl=en&amp;gl=US&amp;source=embed" target="_blank">3704 Voltaire St, San Diego</a>
+                </p>
+            </div>
+            <div class="w3-col l4 m4 s12 status-item highlight-hours">
+                <span class="status-icon">🕒</span>
+                <p><b>Mon – Sat:</b> 8am – 9pm</p>
+            </div>
+            <div class="w3-col l4 m4 s12 status-item">
+                <span class="status-icon">📞</span>
+                <p><a href="tel:6192224476">(619) 222-4476</a></p>
+            </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-24 w3-medium" style="padding: 0px 20px;">
-    <p>Disclaimer: This website is not officially affiliated with Ortiz's Taco Shop. I'm just a fan who built this site to help them reach a wider audience. Questions, updates, or suggestions? Email me at <a href="mailto:support@ortizstacoshop.com" target="_blank">support@ortizstacoshop.com</a>.</p>
-  </footer>
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+        <div class="w3-content">
+            <div class="w3-center reveal" style="margin-bottom: 24px;">
+                <span class="section-eyebrow">What's Cooking</span>
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-subtitle">Made-to-order favorites with the same family recipes we've been using for two decades.</p>
+            </div>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-  <script src="scripts/menu.js"></script>
+            <div id="choices" class="reveal">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'breakfast');" class="tablink w3-bar-item w3-button">Breakfast</a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'burritos');" class="tablink w3-bar-item w3-button">Burritos</a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'tacos');" class="tablink w3-bar-item w3-button">Tacos &amp; More</a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'combo');" class="tablink w3-bar-item w3-button">Plates &amp; Specialties</a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'soups');" class="tablink w3-bar-item w3-button">Soups &amp; Sides</a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'beverages');" class="tablink w3-bar-item w3-button">Beverages</a>
+            </div>
+
+            <div class="menu-container">
+
+                <div id="breakfast" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Breakfast Burritos</b></h3>
+                        <p class="w3-center w3-small">All burritos include Egg, Potato, & Cheese</p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">Chorizo</p>
+                        <span class="item-price">$11.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Ham</p>
+                        <span class="item-price">$11.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Machaca</p>
+                        <span class="item-price">$11.55</span>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Breakfast Plates</b></h3>
+                        <p class="w3-center w3-small">Served with Rice, Beans, and Tortillas</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Chilaquiles (Red or Green)</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chorizo</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Ham</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Huevos A La Mexicana</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Huevos Rancheros</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Machaca</p>
+                        <span class="item-price">$14.55</span>
+                    </div>
+
+                    <hr>
+                </div>
+                
+                <div id="burritos" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Burritos</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">California <span class="w3-tag w3-small w3-round w3-green">Local Favorite</span></p>
+                        <span class="item-price">$12.89</span>
+                    </div>
+                    <p class="item-desc">Carne Asada, Fries, Guacamole, Sour Cream, & Cheese</p>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+                    <p class="item-desc">Grilled Steak, Salsa Fresca, & Guacamole</p>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Beans & Cheese</p>
+                        <span class="item-price">$7.25</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$10.98</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Buche</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Cabeza</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Chile Relleno</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Fish</p>
+                        <span class="item-price">$11.89</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Mixed</p>
+                        <span class="item-price">$10.98</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Pastor</p>
+                        <span class="item-price">$12.96</span>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Shrimp</p>
+                        <span class="item-price">$14.50</span>
+                    </div>
+                    <p class="item-desc">Shrimp, Lettuce, Tartar Sauce, Salsa Fresca, & Rice</p>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Vegetarian</p>
+                        <span class="item-price">$10.79</span>
+                    </div>
+                    <p class="item-desc">Lettuce, Guacamole, Salsa Fresca, Beans, Rice, & Cheese</p>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Conga</p>
+                        <span class="item-price">$10.98</span>
+                    </div>
+                    <p class="item-desc">Your Choice of Meat. Beans, Rice, & Cheese</p>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Chimichangas</b></h3>
+                        <p class="w3-center w3-small">Enchiladas with Cheese. Served with Sour Cream, Lettuce, & Guacamole.</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$14.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$14.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$14.95</span>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Conga</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Conga</p>
+                        <span class="item-price">$11.96</span>
+                    </div>
+                    <p class="item-desc">Cheese with Meat, Beans, & Rice</p>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Sabroso</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Sabroso</p>
+                        <span class="item-price">$14.50</span>
+                    </div>
+                    <p class="item-desc">Carne Asada, Shrimp, Rice, & Sour Cream</p>
+                    
+                    <hr>
+                </div>
+
+                <div id="tacos" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Tacos</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$5.50</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Buche</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cabeza</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Fish</p>
+                        <span class="item-price">$4.97</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Pastor</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Shrimp</p>
+                        <span class="item-price">$6.85</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Tripa</p>
+                        <span class="item-price">$5.99</span>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Mini Tacos</b></h3>
+                        <p class="w3-center w3-small">Each Order is 4 Mini Tacos</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Buche</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cabeza</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Pastor</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Tripa</p>
+                        <span class="item-price">$11.60</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Rolled Tacos</b></h3>
+                        <p class="w3-center w3-small">All Dishes Served with Lettuce, Guacamole, & Cheese</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">3 Rolled Tacos</p>
+                        <span class="item-price">$5.98</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">6 Rolled Tacos</p>
+                        <span class="item-price">$9.25</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">12 Rolled Tacos</p>
+                        <span class="item-price">$15.75</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Quesadillas</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$13.89</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$13.89</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cheese</p>
+                        <span class="item-price">$6.98</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Ham</p>
+                        <span class="item-price">$11.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Shrimp</p>
+                        <span class="item-price">$15.30</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Enchiladas</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$8.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cheese</p>
+                        <span class="item-price">$8.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$8.99</span>
+                    </div>
+
+                    <hr>
+                </div>
+
+                <div id="combo" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Combination Plates</b></h3>
+                        <p class="w3-center w3-small">All plates served with Rice, Beans, & Tortillas</p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">Carne Asada</p>
+                        <span class="item-price">$14.75</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$14.75</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cheese Enchiladas</p>
+                        <span class="item-price">$12.84</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken Enchiladas</p>
+                        <span class="item-price">$12.84</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Shrimp Burrito</p>
+                        <span class="item-price">$16.84</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Shrimp Rancheros</p>
+                        <span class="item-price">$16.84</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Two Beef Tacos</p>
+                        <span class="item-price">$13.84</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Two Chicken Tacos</p>
+                        <span class="item-price">$13.98</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Two Chiles Rellenos</p>
+                        <span class="item-price">$15.50</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Two Fish Tacos</p>
+                        <span class="item-price">$12.95</span>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Tortas</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carnitas</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chorizo</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Ham</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Machaca</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Pastor</p>
+                        <span class="item-price">$12.49</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Nachos & Fries</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Carne Asada Fries</p>
+                        <span class="item-price">$16.49</span>
+                    </div>
+                    <p class="item-desc">Carne Asada, Cheese, Salsa Fresca, Guacamole & Sour Cream</p>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carne Asada Nachos</p>
+                        <span class="item-price">$16.49</span>
+                    </div>
+                    <p class="item-desc">Carne Asada, Beans, Cheese, Salsa Fresca, Guacamole, & Sour Cream</p>
+
+                    <hr>
+                </div>
+
+                <div id="soups" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Soups</b></h3>
+                        <p class="w3-center w3-small">Served with Tortillas & Rice</p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">Caldo de Res</p>
+                        <span class="item-price">$14.75</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Menudo</p>
+                        <span class="item-price">$14.75</span>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Tostadas</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Beans</p>
+                        <span class="item-price">$5.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$6.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$6.99</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Flying Saucers</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">$13.85</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beef</p>
+                        <span class="item-price">$13.85</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Carne Asada Fries</p>
+                        <span class="item-price">$16.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">$13.85</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Vegetarian</p>
+                        <span class="item-price">$11.95</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Cocktail</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Coctel de Camaron</p>
+                        <span class="item-price">Ask</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Sides</b></h3>
+                        <p class="w3-center w3-small">1/2 Pint Serving</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Beans</p>
+                        <span class="item-price">$3.24</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Guacamole</p>
+                        <span class="item-price">$4.99</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Mexican Salsa</p>
+                        <span class="item-price">$2.74</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Rice</p>
+                        <span class="item-price">$3.24</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Sour Cream</p>
+                        <span class="item-price">$2.74</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Extras</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Asada</p>
+                        <span class="item-price">Ask</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Chicken</p>
+                        <span class="item-price">Ask</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Beans</p>
+                        <span class="item-price">$0.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Cheese</p>
+                        <span class="item-price">$0.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Guacamole</p>
+                        <span class="item-price">$0.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Rice</p>
+                        <span class="item-price">$0.95</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Sour Cream</p>
+                        <span class="item-price">$0.95</span>
+                    </div>
+
+                    <hr>
+                </div>
+
+                <div id="beverages" class="menu w3-animate-opacity">
+                    <div class="menu-subheader">
+                        <h3 class="w3-center w3-text-red"><b>Sodas</b></h3>
+                        <p class="w3-center w3-small"></p>
+                    </div>
+                    
+                    <div class="menu-item-row">
+                        <p class="item-name">Soda</p>
+                        <span class="item-price">$1.80</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="menu-subheader w3-padding-32">
+                        <h3 class="w3-center w3-text-red"><b>Mexican Drinks</b></h3>
+                        <p class="w3-center w3-small">All drinks are 22 oz.</p>
+                    </div>
+
+                    <div class="menu-item-row">
+                        <p class="item-name">Horchata</p>
+                        <span class="item-price">$3.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Jamaica</p>
+                        <span class="item-price">$3.49</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <p class="item-name">Tamarindo</p>
+                        <span class="item-price">$3.49</span>
+                    </div>
+                    
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content">
+            <div class="w3-row-padding">
+
+            <div class="w3-col m7 reveal">
+                <span class="section-eyebrow">Our Story</span>
+                <h2><b>A neighborhood staple.</b></h2>
+                <p class="lead">Since 2004, Ortiz's has been the go-to for surfers, locals, and visitors looking for the true taste of San Diego.</p>
+
+                <div class="w3-row w3-padding-16" style="margin: 0 -12px;">
+                    <div class="w3-col s6 about-feature" style="padding: 12px;">
+                        <h4>The Meat</h4>
+                        <p>Our Al Pastor and Carne Asada are marinated daily using family recipes that haven't changed in 20 years.</p>
+                    </div>
+                    <div class="w3-col s6 about-feature" style="padding: 12px;">
+                        <h4>The Community</h4>
+                        <p>Proudly serving Point Loma and Ocean Beach with fresh ingredients and a friendly smile.</p>
+                    </div>
+                </div>
+
+                <div class="hours-block">
+                    <h4>When to catch us</h4>
+                    <div class="hours-row">
+                        <span>Monday – Saturday</span>
+                        <span>8:00am – 9:00pm</span>
+                    </div>
+                    <div class="hours-row closed">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-col m5 reveal">
+                <div class="image-stack">
+                    <img src="images/taco.webp" alt="A signature taco from Ortiz's" class="shadow-main">
+                    <div class="experience-badge">Est. 2004</div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="w3-container">
+        <div class="w3-content w3-center reveal">
+            <span class="section-eyebrow">Come Say Hi</span>
+            <h2>Visit Us</h2>
+            <p class="visit-address">3704 Voltaire St, San Diego, CA 92107</p>
+            <p class="visit-phone">Call to Order: <a href="tel:6192224476">(619) 222-4476</a></p>
+            <div class="w3-padding-16">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.950691503424!2d-117.23164712342533!3d32.740499973678965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80deabacd6d14b9d%3A0x1d3a0c6d1fe7a7af!2sOrtiz&#39;s%20Taco%20Shop!5e0!3m2!1sen!2sus!4v1777350726895!5m2!1sen!2sus"
+                    width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-brand">Ortiz's<span>.</span></div>
+        <p>3704 Voltaire St · San Diego, CA 92107 · <a href="tel:6192224476">(619) 222-4476</a></p>
+        <p>© 2026 Ortiz's Taco Shop · Fan Made Site · <a href="mailto:support@ortizstacoshop.com">Email Us</a></p>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
